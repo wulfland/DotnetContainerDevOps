@@ -348,3 +348,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+start/docker-compose.override.yml
+start/docker-compose.yml
+start/src/GamingWebApp/Dockerfile
+start/src/LeaderboardWebAPI/Dockerfile
