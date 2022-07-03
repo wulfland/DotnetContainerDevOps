@@ -13,7 +13,7 @@ services:
       - backend
 
   db:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
       - SA_PASSWORD=Pass@word
       - MSSQL_PID=Developer
