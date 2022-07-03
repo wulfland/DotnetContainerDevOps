@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch (start Frontend)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build start",
+            "program": "${workspaceFolder}/start/src/GamingWebApp/bin/Debug/net6.0/GamingWebApp.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/start/src/GamingWebApp",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Launch (start WebAPI)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build start",
+            "program": "${workspaceFolder}/start/src/LeaderboardWebAPI/bin/Debug/net6.0/LeaderboardWebAPI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/start/src/LeaderboardWebAPI",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
+    ]
+}
