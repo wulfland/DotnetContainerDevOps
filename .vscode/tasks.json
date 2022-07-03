@@ -33,6 +33,10 @@
                     "${workspaceFolder}/start/docker-compose.yml",             
                     "${workspaceFolder}/start/docker-compose.override.yml"
                 ]
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
             }
         },
         {
@@ -46,6 +50,10 @@
                     "${workspaceFolder}/start/docker-compose.yml",             
                     "${workspaceFolder}/start/docker-compose.override.yml"
                 ]
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
             }
         }
     ]
