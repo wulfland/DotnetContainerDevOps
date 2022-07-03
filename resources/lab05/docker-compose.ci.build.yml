@@ -1,0 +1,10 @@
+#run docker-compose from /ContainerWorkshop/start
+version: "3.4"
+
+services:
+  ci-build:
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    volumes:
+      - .:/src
+    working_dir: /src
+    command: /bin/bash -c "dotnet restore ./ContainerWorkshop.sln && dotnet publish ./ContainerWorkshop.sln -c Release -o ./obj/Docker/publish"
