@@ -37,6 +37,17 @@
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             }
+        },
+        {
+            "name": "Docker (start Frontend)",
+            "type": "docker",
+            "request": "attach",
+            "preLaunchTask": "docker compose up",
+            "postDebugTask": "docker compose down",
+            "platform": "netCore",
+            "sourceFileMap": {
+                "/src": "${workspaceFolder}/start"
+            }
         }
     ]
 }
