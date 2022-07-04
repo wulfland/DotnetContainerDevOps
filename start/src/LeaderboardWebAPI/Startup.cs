@@ -55,6 +55,7 @@ namespace LeaderboardWebAPI
                     options.FormatterMappings.SetMediaTypeMappingForFormat("json", new MediaTypeHeaderValue("application/json"));
                 })
                 .AddNewtonsoftJson(setup => {
+                    JsonConvert.DefaultSettings = () => new JsonSerializerSettings { MaxDepth = 128 };
                     setup.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 })
                 .AddXmlSerializerFormatters();
