@@ -353,3 +353,4 @@ start/docker-compose.yml
 start/src/GamingWebApp/Dockerfile
 start/src/LeaderboardWebAPI/Dockerfile
 start/docker-compose.ci.build.yml
+resources/lab09/istio-1.14.1/*
