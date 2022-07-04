@@ -4,12 +4,11 @@ services:
   leaderboardwebapi:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80;http://+:8080
+      - ASPNETCORE_URLS=http://+:80;http://+:8080
       - ASPNETCORE_MANAGEMENTPORT=8080
       - ConnectionStrings__LeaderboardContext=Server=sql.retrogaming.internal;Database=Leaderboard;User Id=sa;Password=Pass@word;Trusted_Connection=False
     ports:
-      - "4972:80"
-      - "44369:443"
+      - "5002:80"
     depends_on:
       - sql.data
     volumes:
@@ -21,11 +20,10 @@ services:
   gamingwebapp:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=http://+:80
       - LeaderboardApiOptions__BaseUrl=http://leaderboardwebapi
     ports:
-      - "5618:80"
-      - "44325:443"
+      - "5000:80"
     depends_on:
       - leaderboardwebapi
     volumes:
@@ -56,7 +54,7 @@ services:
     depends_on:
       - leaderboardwebapi
     ports:
-      - 5000:80
+      - 5004:80
     networks:
       - backend
 
