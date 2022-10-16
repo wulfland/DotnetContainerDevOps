@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "Launch (start Frontend)",
             "type": "coreclr",
@@ -45,6 +46,10 @@
             "preLaunchTask": "docker compose up",
             "postDebugTask": "docker compose down",
             "platform": "netCore",
+            "containerName": "start-leaderboardwebapi-1",
+            "netCore": {
+                "debuggerPath": "/remote_debugger/vsdbg" // This is the path to vsdbg in the container
+            },
             "sourceFileMap": {
                 "/src": "${workspaceFolder}/start"
             }
